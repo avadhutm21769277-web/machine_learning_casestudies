@@ -1,0 +1,127 @@
+
+
+########################		Titanic Survival Prediction		########################
+
+
+>>>>>>		Project Title	:	Titanic Survival Prediction Using Logistic Regression
+
+>>>>>>		Author		:	Avadhut Yashwant Mote
+
+>>>>>>		Version		:	1.0
+
+>>>>>>		Date		:	September 2025
+
+#####	  Abstract	#######
+
+This project predicts whether a passenger on the Titanic survived based on features such as Age,
+Fare, Sex, Siblings/Spouses aboard, Parents/Children aboard, Passenger Class, and Port of
+Embarkation. The model uses Logistic Regression, a popular machine learning algorithm for binary
+classification problems. The project also includes a graphical user interface (GUI) for real-time
+prediction.
+
+
+######	  Introduction   ######
+
+The Titanic disaster dataset is one of the most popular datasets used in machine learning for
+classification problems. The goal is to predict survival (1 = Survived, 0 = Not Survived) based on
+passenger attributes.
+
+
+#####     Libraries Used   #####
+
+- pandas: Data loading and cleaning
+- numpy: Numerical operations
+- scikit-learn: Train-test split, StandardScaler, LogisticRegression
+- joblib: Model saving and loading
+- tkinter: GUI creation and event handling
+
+
+#####	System Requirements	#####
+
+>>>>>	Software:
+
+- Python 3.x
+- Required Libraries: pandas, numpy, scikit-learn, joblib, tkinter
+Hardware:
+- Minimum: 2GB RAM, Dual-core processor
+
+
+#####	 Data Preprocessing	#####
+
+- Dropping unnecessary columns: 'Passengerid', 'zero'
+- Handling missing values: Filling with column mean
+- Splitting data into features (X) and target (Y)
+
+
+#####	 Machine Learning Model	#####
+
+- Algorithm: Logistic Regression (binary classification)
+- Train/Test Split: 50% training, 50% testing
+- Feature Scaling: StandardScaler used for normalization
+- Accuracy: Printed after training (approx. 77-78%)
+
+
+#####	 Workflow	#####
+
+Dataset → Preprocessing → Feature Scaling → Logistic Regression Training → Accuracy
+Calculation → Model Saving → GUI Prediction
+
+
+#####	GUI Description	#####
+
+- Inputs:
+- Age
+- Fare
+- Sex (1 = Male, 0 = Female)
+- sibsp (No. of siblings/spouses aboard)
+- Parch (No. of parents/children aboard)
+- Pclass (Passenger Class)
+- Embarked (Port code)
+- Output:
+- Displays a message box with prediction (Survived / Not Survived)
+
+
+#####	Code Explanation (Function-wise)	######
+
+
+1>>>>	load_data(): Load dataset from CSV
+2>>>>	number_and_name_of_headers()	: Display dataset headers
+3>>>>	datatypes_of_headers()		: Show datatypes of columns
+4>>>>	feature_headers()		: Select feature columns
+5>>>>	target_header()			: Select target column
+6>>>>	drop_unnecessary_columns()	: Remove unwanted columns
+7>>>>	split_data_vertically()		: Split dataset into X (features) and Y (target)
+8>>>>	split_train_test()		: Train-test split
+9>>>>	using_standard_scaler()		: Scale features
+10>>>	logistic_regression_model()	: Train logistic regression
+11>>>	predict_model()			: Predict on test data
+12>>>	calculate_accuracy()		: Compute accuracy score
+13>>>	save_model()			: Save trained model as .pkl
+14>>>	load_model()			: Load saved model
+15>>>	predict_model_loaded()		: Predict using loaded model
+16>>>	run_gui()			: Create GUI for user input
+
+
+#####	Results & Accuracy	#####
+
+- Accuracy achieved: ~77-78%
+- Model performs reasonably well for binary classification
+
+
+#####	Future Scope	#####
+
+- Use other ML algorithms (Random Forest, SVM) for better accuracy
+- Improve GUI design
+- Deploy model as a web application (Flask/Django)
+
+##### Conclusion	#####
+
+The project successfully predicts survival using Logistic Regression with satisfactory accuracy. The
+GUI allows non-technical users to interact with the model easily.
+
+
+####	References		####
+
+- Kaggle Titanic Dataset: https://www.kaggle.com/c/titanic
+- scikit-learn Documentation: https://scikit-learn.org/stable/
+- Python Official Documentation: https://docs.python.org/3/
